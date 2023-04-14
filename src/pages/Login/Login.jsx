@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link,Navigate, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../components/context/AuthContext'
+import '../../components/Navbar/Navbar.css'
 export default function Login() {
   const {user,LogIn} = UserAuth()
   const [email, setEmail] = useState('')
@@ -31,7 +32,7 @@ export default function Login() {
                   <form onSubmit={handelLogin} action="" className='flex flex-col w-full py-4'>
                     <input onChange={e => setEmail(e.target.value)} className='p-3 my-2 bg-gray-700 rounded-lg ' type="text" placeholder='enter your email...'  autoComplete='email'/>
                     <input onChange={e => setPassword(e.target.value)} className='p-3 my-2 bg-gray-700 rounded-lg ' type="password" placeholder='enter your password...'  autoComplete='current-password'/>
-                    <button  className='bg-red-600 py-3 px-5 rounded-lg  font-bold my-6'>Sign In</button>
+                    <button  className='bg-red-600 py-3 px-5 rounded-lg  font-bold my-6 nav-background transition-all'>Sign In</button>
                   </form>
                   <div className="flex justify-between items-center">
                     <p><input type="checkbox" className='mr-2' /> Remember me</p>

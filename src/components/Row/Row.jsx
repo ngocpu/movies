@@ -9,7 +9,6 @@ export default function Row({title,fetchURL,rowId}) {
             setMovies(res.data.results)
         })
     },[fetchURL])
-    console.log(movies);
     const slideLefft =() =>{
         let sliderLeft = document.getElementById('slider' + rowId)
         sliderLeft.scrollLeft = sliderLeft.scrollLeft -500

@@ -32,7 +32,7 @@ export default function SaveShow() {
             console.log(error);
         }
    }
-   console.log(movies);
+
   return (
     <div>
       <h1 className="text-white font-bold md:text-xl p-4">My Show</h1>

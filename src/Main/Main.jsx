@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import requests from "../api";
 import axios from "axios";
+import './Main.css'
 export default function Main() {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -34,10 +35,10 @@ export default function Main() {
         <div className="absolute top-[40%] p-4 md:p-8">
             <h1 className="text-white text-3xl md:text-5xl font-bold mb-5">{movie?.title}</h1>
           <div className="mb-5">
-            <button className="border bg-gray-300 py-2 px-5 text-black border-gray-300">
+            <button className="border bg-gray-300 py-2 px-5 text-black border-gray-300 transition-all duration-300 btn-play">
               Play
             </button>
-            <button className="border  py-2 px-5 text-white ml-4 border-gray-300">
+            <button className="border  py-2 px-5 text-white ml-4 border-gray-300 transition-all duration-300 btn-watch">
               Watch Latter
             </button>
           </div>
